@@ -12,7 +12,7 @@ public class DiscountCalculator
             throw new ArgumentOutOfRangeException(nameof(total), "Сумма не может быть отрицательной");
 
         // Правило: скидка 10% для заказов от 1000 включительно
-        if (total > Threshold)
+        if (total >= Threshold)
             return total * Rate;
 
         return 0;
